@@ -4,6 +4,7 @@ from app.models import User, Role
 
 
 app = create_app(os.getenv("FLASK_CONFIG") or "default")
+db.create_all(app=app)
 
 
 @app.shell_context_processor
